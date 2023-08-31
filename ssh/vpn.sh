@@ -6,7 +6,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Mahfud2128/tetbot/main/skkkk > /root/tmp
+    curl -sS https://raw.githubusercontent.com/scscp/tetbot/main/skkkk > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -24,7 +24,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Mahfud2128/tetbot/main/skkkk | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/scscp/tetbot/main/skkkk | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -41,7 +41,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Mahfud2128/tetbot/main/skkkk | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/scscp/tetbot/main/skkkk | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -99,7 +99,7 @@ apt-get install openvpn
         mkdir -p /etc/openvpn/server/easy-rsa/
         { wget -qO- "$easy_rsa_url" 2>/dev/null || curl -sL "$easy_rsa_url" ; } | tar xz -C /etc/openvpn/server/easy-rsa/ --strip-components 1
         chown -R root:root /etc/openvpn/server/easy-rsa/
-        cd /usr/share/easy-rsa/ || wget -q "https://raw.githubusercontent.com/Mahfud2128/tetbot/main/dll/vars"
+        cd /usr/share/easy-rsa/ || wget -q "https://raw.githubusercontent.com/scscp/tetbot/main/dll/vars"
 
 cat > /etc/openvpn/server/easy-rsa/vars << EOF
 set_var EASYRSA_REQ_COUNTRY    "MY"
