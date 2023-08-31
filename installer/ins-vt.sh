@@ -557,7 +557,7 @@ EOF
 
 sleep 1
 echo -e "[ ${green}INFO$NC ] Installing bbr.."
-wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/Mahfud2128/tetbot/main/dll/bbr.sh"
+wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/scscp/tetbot/main/dll/bbr.sh"
 chmod +x /usr/bin/bbr
 bbr >/dev/null 2>&1
 rm /usr/bin/bbr >/dev/null 2>&1
